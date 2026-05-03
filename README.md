@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://optimusoc.vercel.app/logo-notxt.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://optimusoc.vercel.app/logo-notxt.svg">
-  <img alt="Optimus" src="https://optimusoc.vercel.app/logo-notxt.svg" width="420">
+  <source media="(prefers-color-scheme: dark)" srcset="https://optimusoc.vercel.app/logo.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://optimusoc.vercel.app/logo.svg">
+  <img alt="Optimus" src="https://optimusoc.vercel.app/logo.svg" width="420">
 </picture>
 
 AI-powered PC optimization assistant for overclocking, undervolting, and performance tuning. No guesswork, no risk — just intelligent recommendations tailored to your exact hardware.
