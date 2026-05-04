@@ -4,7 +4,7 @@
   <img alt="Optimus" src="https://optimusoc.vercel.app/logo.svg" width="420">
 </picture>
 
-AI-powered PC optimization assistant for overclocking, undervolting, and performance tuning. No guesswork, no risk — just intelligent recommendations tailored to your exact hardware.
+AI-powered PC optimization assistant for overclocking, undervolting, and performance tuning. No guesswork, no risk. Just intelligent recommendations tailored to your exact hardware.
 
 ---
 
@@ -145,6 +145,14 @@ Load a saved profile into the chat context for follow-up questions about specifi
   <img src="https://optimus.etai.dev/3.webp" alt="Optimus screenshot 3" width="49%" />
   <img src="https://optimus.etai.dev/4.webp" alt="Optimus screenshot 4" width="49%" />
 </p>
+
+---
+
+## VirusTotal Scans
+
+MSI: <a href="https://www.virustotal.com/gui/file/218850ff92bb1dffbecdf0bcfe496179e32ef8cc9ff96e034bf444b8f19764ef/detection" target="_blank">CLICK HERE</a>
+<br />
+EXE: <a href="https://www.virustotal.com/gui/file/31010af572fd75a87588913cf6053885cb6ac1e65cda20de41fb94994681b868/detection" target="_blank">CLICK HERE</a>
 
 ---
 
