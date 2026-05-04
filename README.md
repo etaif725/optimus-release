@@ -133,6 +133,21 @@ Load a saved profile into the chat context for follow-up questions about specifi
 
 ---
 
+## See It In Action
+
+## Screenshots
+
+<p align="center">
+  <img src="https://optimus.etai.dev/1.webp" alt="Optimus screenshot 1" width="49%" />
+  <img src="https://optimus.etai.dev/2.webp" alt="Optimus screenshot 2" width="49%" />
+</p>
+<p align="center">
+  <img src="https://optimus.etai.dev/3.webp" alt="Optimus screenshot 3" width="49%" />
+  <img src="https://optimus.etai.dev/4.webp" alt="Optimus screenshot 4" width="49%" />
+</p>
+
+---
+
 ## Understanding AI Recommendations
 
 Optimus's recommendations are categorized by component and risk level:
