@@ -148,7 +148,7 @@ Load a saved profile into the chat context for follow-up questions about specifi
 
 ---
 
-## VirusTotal Scans
+## VirusTotal Scans (latest scan was v1.6.1)
 
 MSI: <a href="https://www.virustotal.com/gui/file/218850ff92bb1dffbecdf0bcfe496179e32ef8cc9ff96e034bf444b8f19764ef/detection" target="_blank">CLICK HERE</a>
 <br />
