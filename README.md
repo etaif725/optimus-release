@@ -4,7 +4,7 @@
   <img alt="Optimus" src="https://optimusoc.vercel.app/logo.svg" width="420">
 </picture>
 
-AI-powered PC optimization assistant for overclocking, undervolting, and performance tuning. No guesswork, no risk. Just intelligent recommendations tailored to your exact hardware.
+AI-powered PC optimization assistant for overclocking, undervolting, and performance tuning. No guesswork, no risk — just intelligent recommendations tailored to your exact hardware.
 
 ---
 
@@ -29,15 +29,18 @@ Optimus changes that. We believe everyone deserves to get the most out of their 
 | Feature | Description |
 |---------|-------------|
 | **Hardware Detection** | Automatic detection of CPU, GPU, RAM, storage, and cooling configuration |
-| **Real-Time Monitoring** | Live sensor data including temperatures, clock speeds, power draw, and utilization |
-| **AI Analysis** | Claude-powered recommendations based on your complete system context |
+| **Real-Time Monitoring** | Push-based live sensor data with persistent daemon — instant readings, no polling delays |
+| **AI Analysis** | Claude-powered recommendations with tiered prompts for optimal cost and speed |
+| **Platform Integrations** | Direct SDK access: Ryzen Master (AMD), XTU/MSR (Intel), NVAPI (NVIDIA), ADL/ADLX (Radeon) |
+| **OC Verification** | Stock vs effective fingerprinting — know if your settings are actually applied |
+| **Benchmark Comparison** | Compare against Geekbench/GPU Ark databases with your personal result tracking |
 | **OC Tools** | Benchmark launcher, results import, and performance tracking |
 | **Scan Local** | Auto-detect Cinebench, HWiNFO, 3DMark, and other benchmark results |
-| **Overclock Profiles** | Save, manage, and compare multiple optimization configurations |
+| **Overclock Profiles** | Create, edit, delete, and manage profiles with inline value editing |
 | **PDF Reports** | Generate professional downloadable reports of your optimization settings |
-| **OC Agent Chat** | Interactive AI assistant with full benchmark and sensor context |
+| **OC Agent Chat** | Interactive AI with Eco/Concise/Detailed modes and beautiful JSON rendering |
 | **Glossary** | Comprehensive reference guide for overclocking terminology |
-| **SMUI Theme** | Terminal-aesthetic UI with Nord-inspired colors and JetBrains Mono typography |
+| **SMUI Theme** | Terminal-aesthetic UI with beautified markdown, styled lists, and gradient accents |
 
 ---
 
@@ -57,14 +60,15 @@ This information forms the foundation for all AI recommendations.
 
 ### 2. System Monitoring
 
-The **Monitor** dashboard displays real-time sensor data:
+The **Monitor** dashboard displays real-time sensor data powered by a persistent sensor daemon:
 
-- CPU temperature and utilization
-- GPU temperature, hotspot, and memory temps
-- Current clock speeds and power consumption
-- RAM usage
+- CPU temperature, per-core clocks, and utilization
+- GPU temperature, hotspot, memory temps, and power draw
+- AMD-specific: PPT, TDC, EDC limits and current values
+- Intel-specific: PL1, PL2, per-core ratios
+- Memory usage and configuration (channels, XMP/EXPO state)
 
-Data refreshes every 2 seconds, giving you instant visibility into your system's behavior.
+Data streams in real-time via push events — instant readings with no polling delays.
 
 ### 3. AI-Powered Analysis
 
@@ -86,12 +90,20 @@ Within seconds, you receive:
 
 Every analysis is automatically saved as an **Overclock Profile** with:
 
-- Timestamp and unique identifier
+- Custom title (editable) and timestamp
 - Complete hardware snapshot
-- All AI recommendations
+- All AI recommendations with inline editing
+- Applied/pending status with verification
 - One-click PDF export
 
-Access saved profiles in **Settings > Overclocks** to review, compare, or regenerate reports.
+#### Profile Features
+- **Create Manual Reports** — Build profiles from scratch with guided template
+- **Inline Editing** — Modify CPU, GPU, and RAM values directly (no dialogs)
+- **Platform-Aware Inputs** — Dropdowns show AMD or Intel-specific options
+- **Dynamic Core Count** — Curve Optimizer shows correct inputs for your CPU
+- **Verification** — See if your marked "Applied" settings match live hardware
+
+Access saved profiles in **Settings > Overclocks** to review, edit, compare, or regenerate reports.
 
 ### 5. OC Tools & Benchmarking
 
@@ -100,11 +112,13 @@ The **OC Tools** page provides comprehensive benchmark management:
 #### Benchmark Launcher
 - Detects installed benchmark utilities (Cinebench, Prime95, FurMark, 3DMark, etc.)
 - One-click launch for any detected benchmark
+- **Custom Paths** — Manually select executable files for non-standard installations
 - Download links for tools you don't have installed
 - Filter by type: CPU, GPU, Memory, Storage, System
 
 #### Import Results
 - **Scan Local** — Automatically finds benchmark results in common Windows locations
+- **Duplicate Detection** — Content-based fingerprinting prevents re-importing identical results
 - Drag-and-drop file import for manual uploads
 - Supported formats:
   - **Cinebench** — R23/2024 ranking files from cb_ranking folder
@@ -131,28 +145,43 @@ The **OC Agent** isn't just for analysis — it's a knowledgeable assistant. Ask
 
 Load a saved profile into the chat context for follow-up questions about specific recommendations.
 
----
+#### Response Modes
+- **Concise** — Quick, focused answers (~5-15 sec)
+- **Detailed** — Thorough explanations with examples (~30-60 sec)
+- **Eco** — Ultra-efficient mode, ~90% cheaper for simple questions
 
-## See It In Action
-
-## Screenshots
-
-<p align="center">
-  <img src="https://optimus.etai.dev/1.webp" alt="Optimus screenshot 1" width="49%" />
-  <img src="https://optimus.etai.dev/2.webp" alt="Optimus screenshot 2" width="49%" />
-</p>
-<p align="center">
-  <img src="https://optimus.etai.dev/3.webp" alt="Optimus screenshot 3" width="49%" />
-  <img src="https://optimus.etai.dev/4.webp" alt="Optimus screenshot 4" width="49%" />
-</p>
+#### Beautified Output
+AI responses render with styled formatting:
+- V/F curves and fan curves displayed as visual cards
+- Memory timings and BIOS settings in formatted tables
+- Clear section headers with visual dividers
+- Numbered steps with gradient badges
 
 ---
 
-## VirusTotal Scans (latest scan was v1.6.1)
+## Application Pages
 
-MSI: <a href="https://www.virustotal.com/gui/file/218850ff92bb1dffbecdf0bcfe496179e32ef8cc9ff96e034bf444b8f19764ef/detection" target="_blank">CLICK HERE</a>
-<br />
-EXE: <a href="https://www.virustotal.com/gui/file/31010af572fd75a87588913cf6053885cb6ac1e65cda20de41fb94994681b868/detection" target="_blank">CLICK HERE</a>
+| Page | Purpose |
+|------|---------|
+| **Monitor** | Real-time hardware monitoring dashboard with live sensor data |
+| **OC Agent** | AI chat interface for analysis and optimization questions |
+| **OC Tools** | Benchmark launcher, results import, and performance history |
+| **Glossary** | Searchable reference guide for PC optimization terminology |
+| **Settings** | Hardware configuration, API setup, saved profiles, preferences |
+
+---
+
+## Settings Sections
+
+| Section | Description |
+|---------|-------------|
+| **Hardware** | View and edit detected hardware configuration, re-run detection |
+| **API Key** | Configure your Anthropic API key for AI features |
+| **Overclocks** | Create, edit, delete profiles — inline value editing, custom titles, PDF export |
+| **Catalogs** | Update hardware reference databases |
+| **Preferences** | App behavior settings (units, response style, streaming, notifications) |
+| **Data** | Export/import configuration, benchmark data, reset options |
+| **About** | Version info and application details |
 
 ---
 
@@ -232,7 +261,12 @@ Each term includes:
 | ✅ | Comprehensive glossary |
 | ✅ | Benchmark integration with OC Tools |
 | ✅ | Auto-scan local benchmark results |
-| 🔄 | One-click BIOS export (planned) |
+| ✅ | Real-time push-based sensor daemon |
+| ✅ | Platform SDK integrations (Ryzen Master, XTU, NVAPI, ADL) |
+| ✅ | OC verification with stock vs effective fingerprinting |
+| ✅ | Editable overclock profiles with inline editing |
+| ✅ | Token-optimized AI with tiered prompts and caching |
+| ✅ | Beautified chat UI with styled markdown rendering |
 | 🔄 | Community profile sharing (planned) |
 | 🔄 | Multi-language support (planned) |
 
